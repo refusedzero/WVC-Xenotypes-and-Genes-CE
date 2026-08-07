@@ -27,8 +27,6 @@ Load this patch after WVC and Combat Extended. Disable the older `Asname.wvcgene
 
 We loaded the full profile, spawned the golems, assigned an overseer, made them fight, fired the stonethrower, checked hardened feathers, and watched the logs when anything looked suspicious. That does not make every possible gene stack predictable, but it gives this release a real gameplay foundation instead of an XML-only thumbs-up.
 
-The optional `wvc.wvcmod.wvcspecific` replacement module is outside version 1.0.0's supported surface.
-
 ## Bug reports
 
 Please include `Player.log`, your active mod list and load order, and the gene, golem, or weapon involved. The Steam Workshop page will be linked here during the launch handoff; GitHub issues are welcome for reproducible technical problems.
