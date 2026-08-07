@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Preserve the stonethrower's intrinsic, slow, single-shot stone identity. -->
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>WVC_GolemGun_Slugthrower</defName>
+    <statBases>
+      <Mass>1.5</Mass>
+      <Bulk>3</Bulk>
+      <SightsEfficiency>0.85</SightsEfficiency>
+      <ShotSpread>0.3</ShotSpread>
+      <SwayFactor>1.2</SwayFactor>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>WVC_CE_StoneSlug</defaultProjectile>
+      <warmupTime>0.7</warmupTime>
+      <range>20</range>
+      <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+  </Operation>
+
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="WVC_GolemGun_Slugthrower"]/tools/li</xpath>
+    <attribute>Class</attribute>
+    <value>CombatExtended.ToolCE</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="WVC_GolemGun_Slugthrower"]/tools/li</xpath>
+    <value>
+      <armorPenetrationSharp>0.5</armorPenetrationSharp>
+      <armorPenetrationBlunt>3</armorPenetrationBlunt>
+      <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+    </value>
+  </Operation>
+
+  <!-- Convert natural weapons in place and retain WVC's verbs and effects. -->
+
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>
+      Defs/HediffDef[defName="WVC_RB_Mecha_ScytheTail"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li |
+      Defs/HediffDef[defName="WVC_XaG_ArchiteClaws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li |
+      Defs/HediffDef[defName="WVC_XaG_NaturalClaws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li
+    </xpath>
+    <attribute>Class</attribute>
+    <value>CombatExtended.ToolCE</value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>
+      Defs/HediffDef[defName="WVC_RB_Mecha_ScytheTail"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li/armorPenetration |
+      Defs/HediffDef[defName="WVC_XaG_ArchiteClaws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li/armorPenetration |
+      Defs/HediffDef[defName="WVC_XaG_NaturalClaws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li/armorPenetration
+    </xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="WVC_RB_Mecha_ScytheTail"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li</xpath>
+    <value>
+      <armorPenetrationSharp>2.2</armorPenetrationSharp>
+      <armorPenetrationBlunt>5</armorPenetrationBlunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="WVC_XaG_ArchiteClaws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li</xpath>
+    <value>
+      <armorPenetrationSharp>2.2</armorPenetrationSharp>
+      <armorPenetrationBlunt>5</armorPenetrationBlunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="WVC_XaG_NaturalClaws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li</xpath>
+    <value>
+      <armorPenetrationSharp>0.8</armorPenetrationSharp>
+      <armorPenetrationBlunt>3</armorPenetrationBlunt>
+    </value>
+  </Operation>
+
+  <!-- Hardened feathers follow CE's official Anomaly spike projectile model. -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="WVC_Dustogenic_HardenedFeathers"]</xpath>
+    <value>
+      <thingClass>CombatExtended.BulletCE</thingClass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Dustogenic_HardenedFeathers"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>RangedStab</damageDef>
+        <damageAmountBase>15</damageAmountBase>
+        <armorPenetrationSharp>6</armorPenetrationSharp>
+        <armorPenetrationBlunt>8</armorPenetrationBlunt>
+        <stoppingPower>1</stoppingPower>
+        <speed>55</speed>
+      </projectile>
+    </value>
+  </Operation>
+
+</Patch>

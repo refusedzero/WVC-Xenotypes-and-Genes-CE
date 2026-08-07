@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Concrete body shapes avoid inherited duplicate/conflicting extensions. -->
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>
+      Defs/ThingDef[
+        defName="WVC_Golem_Liftoid" or
+        defName="WVC_Golem_Constructoid" or
+        defName="WVC_Golem_Crafter" or
+        defName="WVC_Golem_Miner" or
+        defName="WVC_Golem_Hunter" or
+        defName="WVC_Golem_Militoid" or
+        defName="WVC_Golem_Cleanoid" or
+        defName="WVC_Golem_Behemoth" or
+        defName="WVC_Golem_Medicor"
+      ]
+    </xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>Humanoid</bodyShape>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Stonepede"]</xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>QuadrupedLow</bodyShape>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- Convert inherited and concrete override tools without replacing tool data. -->
+
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>
+      Defs/ThingDef[@Name="WVC_XenotypesAndGenes_Golemlike_Base"]/tools/li |
+      Defs/ThingDef[@Name="WVC_XenotypesAndGenes_Golemlike_StoneHeavy"]/tools/li |
+      Defs/ThingDef[defName="WVC_Golem_Cleanoid"]/tools/li |
+      Defs/ThingDef[defName="WVC_Golem_Medicor"]/tools/li |
+      Defs/ThingDef[defName="WVC_Golem_Stonepede"]/tools/li
+    </xpath>
+    <attribute>Class</attribute>
+    <value>CombatExtended.ToolCE</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="WVC_XenotypesAndGenes_Golemlike_Base"]/tools/li</xpath>
+    <value><armorPenetrationBlunt>6</armorPenetrationBlunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="WVC_XenotypesAndGenes_Golemlike_StoneHeavy"]/tools/li</xpath>
+    <value><armorPenetrationBlunt>12</armorPenetrationBlunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Cleanoid"]/tools/li</xpath>
+    <value><armorPenetrationBlunt>2</armorPenetrationBlunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Medicor"]/tools/li</xpath>
+    <value><armorPenetrationBlunt>2</armorPenetrationBlunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Stonepede"]/tools/li</xpath>
+    <value><armorPenetrationBlunt>15</armorPenetrationBlunt></value>
+  </Operation>
+
+  <!-- Shared stone and light golem armor. -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@Name="WVC_XenotypesAndGenes_Golemlike_Stone"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>6</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Liftoid"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>2</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Liftoid"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>2</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Constructoid"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>4</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Constructoid"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>6</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Crafter"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>3</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Crafter"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>8</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Miner"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>4</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Miner"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>6</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Hunter"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>1.5</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Hunter"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>4</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Militoid"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>3</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Militoid"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>3</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Cleanoid"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>3</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Cleanoid"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>2.5</ArmorRating_Blunt></value>
+  </Operation>
+
+  <!-- Heavy golem armor. -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@Name="WVC_XenotypesAndGenes_Golemlike_StoneHeavy"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>12</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@Name="WVC_XenotypesAndGenes_Golemlike_StoneHeavy"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>30</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Behemoth"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>16</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Behemoth"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>40</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Medicor"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>10</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Medicor"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>25</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Stonepede"]/statBases/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>18</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Stonepede"]/statBases/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>12</ArmorRating_Blunt></value>
+  </Operation>
+
+  <!-- Regenerating durability for concrete base-game golems. -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>
+      Defs/ThingDef[
+        defName="WVC_Golem_Liftoid" or
+        defName="WVC_Golem_Constructoid" or
+        defName="WVC_Golem_Crafter" or
+        defName="WVC_Golem_Miner" or
+        defName="WVC_Golem_Hunter" or
+        defName="WVC_Golem_Militoid" or
+        defName="WVC_Golem_Cleanoid"
+      ]
+    </xpath>
+    <value>
+      <comps>
+        <li Class="CombatExtended.CompProperties_ArmorDurability">
+          <Durability>700</Durability>
+          <Regenerates>true</Regenerates>
+          <RegenInterval>1250</RegenInterval>
+          <RegenValue>5</RegenValue>
+          <MinArmorPct>0.5</MinArmorPct>
+        </li>
+      </comps>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Behemoth"]</xpath>
+    <value>
+      <comps>
+        <li Class="CombatExtended.CompProperties_ArmorDurability">
+          <Durability>2500</Durability>
+          <Regenerates>true</Regenerates>
+          <RegenInterval>1250</RegenInterval>
+          <RegenValue>5</RegenValue>
+          <MinArmorPct>0.5</MinArmorPct>
+        </li>
+      </comps>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Medicor"]</xpath>
+    <value>
+      <comps>
+        <li Class="CombatExtended.CompProperties_ArmorDurability">
+          <Durability>2200</Durability>
+          <Regenerates>true</Regenerates>
+          <RegenInterval>1250</RegenInterval>
+          <RegenValue>5</RegenValue>
+          <MinArmorPct>0.5</MinArmorPct>
+        </li>
+      </comps>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="WVC_Golem_Stonepede"]</xpath>
+    <value>
+      <comps>
+        <li Class="CombatExtended.CompProperties_ArmorDurability">
+          <Durability>3000</Durability>
+          <Regenerates>true</Regenerates>
+          <RegenInterval>1250</RegenInterval>
+          <RegenValue>5</RegenValue>
+          <MinArmorPct>0.5</MinArmorPct>
+        </li>
+      </comps>
+    </value>
+  </Operation>
+
+</Patch>

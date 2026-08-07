@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- WVC loads this obsolete compatibility def only when
+       wvc.wvcmod.wvcspecific is absent. LoadFolders.xml mirrors that gate. -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_Furskin_CoarseFur"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Clothed"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>2</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_Furskin_CoarseFur"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Clothed"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>4</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_Furskin_CoarseFur"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Unclothed"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>0.5</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_Furskin_CoarseFur"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Unclothed"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>1</ArmorRating_Blunt></value>
+  </Operation>
+
+</Patch>

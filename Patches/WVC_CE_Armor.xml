@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Archite and mecha armor -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_MecaBodyParts_Spine"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>2</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_MecaUpgrades_CombatMode"]/conditionalStatAffecters/li[@Class="WVC_XenotypesAndGenes.ConditionalStatAffecter_Drafted"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>2</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_MecaUpgrades_CombatMode"]/conditionalStatAffecters/li[@Class="WVC_XenotypesAndGenes.ConditionalStatAffecter_Drafted"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>9</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_MechaSkin"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>1.5</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_MechaSkin"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>3</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_SyntSkin"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>1</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_SyntSkin"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>1.5</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_MechaAI_SoftwareManipulation"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>2</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_MechaAI_SoftwareManipulation"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>2</ArmorRating_Blunt></value>
+  </Operation>
+
+  <!-- Natural armor ladder -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ArmoredSkin_Stone"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>0.5</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ArmoredSkin_Stone"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>1</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ArmoredSkin_Steel"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>1.5</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ArmoredSkin_Steel"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>3</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ArmoredSkin_Plasteel"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>3</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ArmoredSkin_Plasteel"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>6</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_Energyshifter_ArmoredSkin"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>3</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_Energyshifter_ArmoredSkin"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>6</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ArmoredSkin_Fortress"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>4</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ArmoredSkin_Fortress"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>9</ArmorRating_Blunt></value>
+  </Operation>
+
+  <!-- Conditional armor -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Clothed"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>3</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Clothed"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>9</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Unclothed"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>0.5</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_ClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Unclothed"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>1</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_UnClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Clothed"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>-0.5</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_UnClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Clothed"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>-1</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_UnClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Unclothed"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>3</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_UnClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Unclothed"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>9</ArmorRating_Blunt></value>
+  </Operation>
+
+
+  <!-- Specialized natural armor -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_RuneSkin"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>4</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_StoneSkin"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>1</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_StoneSkin"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>4</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_DryadSkin"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>0.5</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_DryadSkin"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>1</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_HalfBone"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>1</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_BoneSkin"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>5</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_BoneSkin"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>1</ArmorRating_Blunt></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_Tough_Overrider"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>4</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="WVC_Tough_Overrider"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>9</ArmorRating_Blunt></value>
+  </Operation>
+
+  <!-- Random former specialty: armored stage only -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="WVC_GeneHediffStatRand_FormerGeneticSpeciality"]/stages/li[minSeverity="0.5"]/statOffsets/ArmorRating_Sharp</xpath>
+    <value><ArmorRating_Sharp>4</ArmorRating_Sharp></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="WVC_GeneHediffStatRand_FormerGeneticSpeciality"]/stages/li[minSeverity="0.5"]/statOffsets/ArmorRating_Blunt</xpath>
+    <value><ArmorRating_Blunt>9</ArmorRating_Blunt></value>
+  </Operation>
+
+</Patch>

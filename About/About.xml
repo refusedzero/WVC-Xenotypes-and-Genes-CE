@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>WVC - Xenotypes and Genes CE Compatibility</name>
+  <author>refusedzero and codex</author>
+  <packageId>refusedzero.wvcxenotypesandgenes.ce</packageId>
+  <modVersion>1.0.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>wvc.sergkart.races.biotech</packageId>
+      <displayName>WVC - Xenotypes and Genes</displayName>
+      <downloadUrl>https://github.com/WVCSergkart/WVC_RacesBiotech</downloadUrl>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2886992038</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>CETeam.CombatExtended</packageId>
+      <displayName>Combat Extended</displayName>
+      <downloadUrl>https://github.com/CombatExtended-Continued/CombatExtended</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>wvc.sergkart.races.biotech</li>
+    <li>CETeam.CombatExtended</li>
+  </loadAfter>
+  <description>Clean-room Combat Extended compatibility for WVC - Xenotypes and Genes. Converts natural armor, golem races and melee tools, the stonethrower, hardened feathers, and optional Ideology and Anomaly combat surfaces while preserving unrelated WVC stats and behavior.</description>
+</ModMetaData>
