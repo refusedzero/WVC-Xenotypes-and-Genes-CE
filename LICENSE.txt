@@ -1,6 +1,6 @@
 # License
 
-WVC - Xenotypes and Genes CE Compatibility is licensed under the Creative
+WVC - Xenotypes and Genes: CE Compatibility is licensed under the Creative
 Commons Attribution-NonCommercial-ShareAlike 4.0 International license
 (CC BY-NC-SA 4.0).
 

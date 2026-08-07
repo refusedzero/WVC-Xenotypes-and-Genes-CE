@@ -1,6 +1,8 @@
-![WVC - Xenotypes and Genes CE Compatibility](About/Preview.png)
+![WVC - Xenotypes and Genes: CE Compatibility](assets/wvc-xenotypes-and-genes-ce.gif)
 
-# WVC - Xenotypes and Genes, now speaking Combat Extended
+# WVC - Xenotypes and Genes: CE Compatibility
+
+**Now speaking Combat Extended.**
 
 **RimWorld 1.6 | Version 1.0.0**
 
@@ -35,4 +37,4 @@ Please include `Player.log`, your active mod list and load order, and the gene, 
 
 WVC - Xenotypes and Genes is by Sergkart and contributors. Combat Extended is by the Combat Extended team and contributors. This is an independent compatibility patch by **refusedzero**. No affiliation or endorsement is implied.
 
-See [LICENSE.txt](LICENSE.txt) for license and upstream attribution details.
+See [LICENSE.txt](../LICENSE.txt) for license and upstream attribution details.
