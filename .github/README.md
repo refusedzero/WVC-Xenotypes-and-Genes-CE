@@ -9,7 +9,7 @@ WVC is packed with strange genes, living armor, natural weapons, and an entire w
 ## What it covers
 
 - CE armor and durability for all 14 current golem races.
-- Natural armor from WVC genes and hediffs, translated into CE armor values.
+- Natural armor from WVC genes and hediffs translated into CE armor values.
 - CE-aware melee tools for golems, scythe tails, archite claws, and natural claws.
 - The Hunter's stonethrower and hardened-feather projectile paths.
 - Conditional Ideology, Anomaly, and legacy content.
