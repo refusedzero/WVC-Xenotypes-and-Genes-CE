@@ -6,4 +6,10 @@
     <li IfModActive="ludeon.rimworld.anomaly">Anomaly</li>
     <li IfModNotActive="wvc.wvcmod.wvcspecific">Legacy</li>
   </v1.6>
+  <v1.7>
+    <li>/</li>
+    <li IfModActive="ludeon.rimworld.ideology">Ideology</li>
+    <li IfModActive="ludeon.rimworld.anomaly">Anomaly</li>
+    <!-- WVC's 1.7 loadFolders never load its Legacy folder, so WVC_Furskin_CoarseFur does not exist there. -->
+  </v1.7>
 </loadFolders>
