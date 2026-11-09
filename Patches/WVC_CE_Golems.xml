@@ -106,7 +106,7 @@
 
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="WVC_Golem_Crafter"]/statBases/ArmorRating_Blunt</xpath>
-    <value><ArmorRating_Blunt>8</ArmorRating_Blunt></value>
+    <value><ArmorRating_Blunt>6</ArmorRating_Blunt></value>
   </Operation>
 
   <Operation Class="PatchOperationReplace">
@@ -188,7 +188,7 @@
 
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="WVC_Golem_Stonepede"]/statBases/ArmorRating_Blunt</xpath>
-    <value><ArmorRating_Blunt>12</ArmorRating_Blunt></value>
+    <value><ArmorRating_Blunt>30</ArmorRating_Blunt></value>
   </Operation>
 
   <!-- Regenerating durability for concrete base-game golems. -->

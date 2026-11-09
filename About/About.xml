@@ -3,7 +3,7 @@
   <name>WVC - Xenotypes and Genes: CE Compatibility</name>
   <author>refusedzero</author>
   <packageId>refusedzero.wvcxenotypesandgenes.ce</packageId>
-  <modVersion>1.1.0</modVersion>
+  <modVersion>1.2.0</modVersion>
   <supportedVersions>
     <li>1.6</li>
     <li>1.7</li>

@@ -68,16 +68,16 @@
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/HediffDef[defName="WVC_RB_Mecha_ScytheTail"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li</xpath>
     <value>
-      <armorPenetrationSharp>2.2</armorPenetrationSharp>
-      <armorPenetrationBlunt>5</armorPenetrationBlunt>
+      <armorPenetrationSharp>8</armorPenetrationSharp>
+      <armorPenetrationBlunt>6</armorPenetrationBlunt>
     </value>
   </Operation>
 
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/HediffDef[defName="WVC_XaG_ArchiteClaws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li</xpath>
     <value>
-      <armorPenetrationSharp>2.2</armorPenetrationSharp>
-      <armorPenetrationBlunt>5</armorPenetrationBlunt>
+      <armorPenetrationSharp>8</armorPenetrationSharp>
+      <armorPenetrationBlunt>6</armorPenetrationBlunt>
     </value>
   </Operation>
 
@@ -104,8 +104,8 @@
       <projectile Class="CombatExtended.ProjectilePropertiesCE">
         <damageDef>RangedStab</damageDef>
         <damageAmountBase>15</damageAmountBase>
-        <armorPenetrationSharp>6</armorPenetrationSharp>
-        <armorPenetrationBlunt>8</armorPenetrationBlunt>
+        <armorPenetrationSharp>9</armorPenetrationSharp>
+        <armorPenetrationBlunt>12</armorPenetrationBlunt>
         <stoppingPower>1</stoppingPower>
         <speed>55</speed>
       </projectile>

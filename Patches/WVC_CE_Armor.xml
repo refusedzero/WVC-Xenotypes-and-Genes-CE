@@ -10,7 +10,7 @@
 
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/GeneDef[defName="WVC_MecaUpgrades_CombatMode"]/conditionalStatAffecters/li[@Class="WVC_XenotypesAndGenes.ConditionalStatAffecter_Drafted"]/statOffsets/ArmorRating_Sharp</xpath>
-    <value><ArmorRating_Sharp>2</ArmorRating_Sharp></value>
+    <value><ArmorRating_Sharp>3</ArmorRating_Sharp></value>
   </Operation>
 
   <Operation Class="PatchOperationReplace">
@@ -109,7 +109,7 @@
 
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/GeneDef[defName="WVC_ClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Clothed"]/statOffsets/ArmorRating_Blunt</xpath>
-    <value><ArmorRating_Blunt>9</ArmorRating_Blunt></value>
+    <value><ArmorRating_Blunt>7</ArmorRating_Blunt></value>
   </Operation>
 
   <Operation Class="PatchOperationReplace">
@@ -139,7 +139,7 @@
 
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/GeneDef[defName="WVC_UnClothedArmor"]/conditionalStatAffecters/li[@Class="ConditionalStatAffecter_Unclothed"]/statOffsets/ArmorRating_Blunt</xpath>
-    <value><ArmorRating_Blunt>9</ArmorRating_Blunt></value>
+    <value><ArmorRating_Blunt>7</ArmorRating_Blunt></value>
   </Operation>
 
 
